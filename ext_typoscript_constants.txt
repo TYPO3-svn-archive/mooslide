@@ -1,0 +1,6 @@
+plugin.tx_mooslide {
+
+	# cat=plugin.mooslide/enable/a1; type=options[dont include mootools=0,use mootools from extension/t3mootools=1]; label=Use Mootools from extension:Here you can choose if this extension will include a mootools library (either the one that comes with this extension or from t3mootools if installed) or not. if you choose to not include a mootools library, you have to make sure that there is a mootools library available for the extension to work. it's compatible with mootools 1.1 and 1.2.
+	useinternalmootools=1
+	
+}

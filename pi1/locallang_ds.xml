@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for extension 'mooslide'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="pi1_title">Mooslide</label>
+			<label index="pi1_plus_wiz_description">inserts a mooslide element which can display either selected content elements or full pages in a slideshow/newsticker style</label>
+			
+			<label index="flexform_ds.setup.title">main setup</label>
+			<label index="flexform_ds.setup.collectiontype">get content for slider from (save after change!):</label>
+			<label index="flexform_ds.setup.collectiontype.0">content elements</label>
+			<label index="flexform_ds.setup.collectiontype.1">whole pages</label>
+			<label index="flexform_ds.setup.ccollection">select content elements here:</label>
+			<label index="flexform_ds.setup.pcollection">select pages here:</label>
+			<label index="flexform_ds.setup.halignment">horizontal alignment of the mooslide box:</label>
+			<label index="flexform_ds.setup.halignment.0">centered</label>
+			<label index="flexform_ds.setup.halignment.1">left</label>
+			<label index="flexform_ds.setup.halignment.2">right</label>
+			<label index="flexform_ds.setup.halignmenttext">horizontal alignment of the content:</label>
+			<label index="flexform_ds.setup.halignmenttext.0">left</label>
+			<label index="flexform_ds.setup.halignmenttext.1">right</label>
+			<label index="flexform_ds.setup.halignmenttext.2">centered</label>
+			<label index="flexform_ds.setup.halignmenttext.3">justified</label>
+			<label index="flexform_ds.setup.bkgdcolor">background color:</label>
+			<label index="flexform_ds.setup.width">width:</label>
+			<label index="flexform_ds.setup.height">height:</label>
+			<label index="flexform_ds.setup.slideinterval">pause between slides (in ms):</label>
+			<label index="flexform_ds.setup.slidedirection">running direction:</label>
+			<label index="flexform_ds.setup.slidedirection.left">to the left</label>
+			<label index="flexform_ds.setup.slidedirection.right">to the right</label>
+			<label index="flexform_ds.setup.slidedirection.up">upwards</label>
+			<label index="flexform_ds.setup.slidedirection.down">downwards</label>
+			<label index="flexform_ds.setup.slidepauseonmousein">pause slides on 'mouseover'</label>
+			<label index="flexform_ds.setup.transitiontime">transition duration (ms) [must be at least 50ms shorter than the pause between slides!]:</label>
+			<label index="flexform_ds.setup.transitiontype">transition type:</label>
+			<label index="flexform_ds.setup.transitiontype.quad">quadratic</label>
+			<label index="flexform_ds.setup.transitiontype.cubic">cubicular</label>
+			<label index="flexform_ds.setup.transitiontype.quart">quartetic</label>
+			<label index="flexform_ds.setup.transitiontype.quint">quintic</label>
+			<label index="flexform_ds.setup.transitiontype.expo">exponential</label>
+			<label index="flexform_ds.setup.transitiontype.circ">circular</label>
+			<label index="flexform_ds.setup.transitiontype.sine">sineousidal</label>
+			<label index="flexform_ds.setup.transitiontype.back">backwards</label>
+			<label index="flexform_ds.setup.transitiontype.bounce">bouncing</label>
+			<label index="flexform_ds.setup.transitiontype.elastic">elastic</label>
+			<label index="flexform_ds.setup.transitionease">transition easing:</label>
+			<label index="flexform_ds.setup.transitionease.none">none</label>
+			<label index="flexform_ds.setup.transitionease.in">ease in</label>
+			<label index="flexform_ds.setup.transitionease.out">ease out</label>
+			<label index="flexform_ds.setup.transitionease.inout">ease in&amp;out</label>
+			
+			<label index="flexform_ds.border.title">border</label>
+			<label index="flexform_ds.border.styles.top">&lt;= everything like TOP</label>
+			<label index="flexform_ds.border.styles.left">&lt;= everything like LEFT</label>
+			<label index="flexform_ds.border.styles.right">&lt;= everything like RIGHT</label>
+			<label index="flexform_ds.border.styles.bottom">&lt;= everything like BOTTOM</label>
+			<label index="flexform_ds.border.styles.0">none</label>
+			<label index="flexform_ds.border.styles.1">solid</label>
+			<label index="flexform_ds.border.styles.2">dotted</label>
+			<label index="flexform_ds.border.styles.3">dashed</label>
+			<label index="flexform_ds.border.styles.4">double</label>
+			<label index="flexform_ds.border.styles.5">groove</label>
+			<label index="flexform_ds.border.styles.6">ridge</label>
+			<label index="flexform_ds.border.styles.7">inset</label>
+			<label index="flexform_ds.border.styles.8">outset</label>
+			<label index="flexform_ds.border.topstyle">TOP - style (save after changes!)</label>
+			<label index="flexform_ds.border.topsize">TOP - size (px)</label>
+			<label index="flexform_ds.border.topcolor">TOP - color</label>
+			<label index="flexform_ds.border.leftstyle">LEFT - style (save after changes!)</label>
+			<label index="flexform_ds.border.leftsize">LEFT - size (px)</label>
+			<label index="flexform_ds.border.leftcolor">LEFT - color</label>
+			<label index="flexform_ds.border.rightstyle">RIGHT - style (save after changes!)</label>
+			<label index="flexform_ds.border.rightsize">RIGHT - size (px)</label>
+			<label index="flexform_ds.border.rightcolor">RIGHT - color</label>
+			<label index="flexform_ds.border.bottomstyle">BOTTOM - style (save after changes!)</label>
+			<label index="flexform_ds.border.bottomsize">BOTTOM - size (px)</label>
+			<label index="flexform_ds.border.bottomcolor">BOTTOM - color</label>
+			
+			<label index="flexform_ds.clicklabel.title">clicklabel</label>
+			<label index="flexform_ds.clicklabel.clicklabelcontent">content element w/ image(+link)</label>
+			<label index="flexform_ds.clicklabel.clicklabelalignment">alignment of the picture element:</label>
+			<label index="flexform_ds.clicklabel.clicklabelalignment.0">left</label>
+			<label index="flexform_ds.clicklabel.clicklabelalignment.1">right</label>
+			<label index="flexform_ds.clicklabel.sliderleftmargin">sliders inner distance from the left border of the container (px)</label>
+			<label index="flexform_ds.clicklabel.sliderrightmargin">sliders inner distance from the right border of the container (px)</label>
+			<label index="flexform_ds.clicklabel.slidertopmargin">sliders inner distance from the top border of the container (px)</label>
+			<label index="flexform_ds.clicklabel.sliderbottommargin">sliders inner distance from the bottom border of the container (px)</label>
+
+			<label index="flexform_ds.navbar.title">navigation</label>
+			<label index="flexform_ds.navbar.showctrlbar">show inline '&lt;&lt; previous' and 'next &gt;&gt;' buttonbar:</label>
+			<label index="flexform_ds.navbar.ctrlbarwidth">width of the buttonbar:</label>
+			<label index="flexform_ds.navbar.ctrlbarposition">positioning of the buttonbar:</label>
+			<label index="flexform_ds.navbar.ctrlbarposition.left">left</label>
+			<label index="flexform_ds.navbar.ctrlbarposition.right">right</label>
+			<label index="flexform_ds.navbar.ctrlbarposition.top">top</label>
+			<label index="flexform_ds.navbar.ctrlbarposition.bottom">bottom</label>
+			<label index="flexform_ds.navbar.ctrlbarbkgdcolor">background colour of the buttonbar:</label>
+			<label index="flexform_ds.navbar.dctrlleftbutton">'GO LEFT' button (from: ..mooslide/res/defaultbuttons/left/ -&gt; for: 'to the left' &amp; 'to the right'):</label>
+			<label index="flexform_ds.navbar.dctrlrightbutton">'GO RIGHT' button (from: ..mooslide/res/defaultbuttons/right/ -&gt; for: 'to the left' &amp; 'to the right'):</label>
+			<label index="flexform_ds.navbar.dctrlupbutton">'GO UP' button (from: ..mooslide/res/defaultbuttons/up/ -&gt; for: 'upwards' &amp; 'downwards'):</label>
+			<label index="flexform_ds.navbar.dctrldownbutton">'GO DOWN' button (from: ..mooslide/res/defaultbuttons/down/ -&gt; for: 'upwards' &amp; 'downwards'):</label>
+			<label index="flexform_ds.navbar.cctrlleftbutton">'GO LEFT' button (from: fileadmin/mooslidebuttons/left/ -&gt; for: 'to the left' &amp; 'to the right'):</label>
+			<label index="flexform_ds.navbar.cctrlrightbutton">'GO RIGHT' button (from: fileadmin/mooslidebuttons/right/ -&gt; for: 'to the left' &amp; 'to the right'):</label>
+			<label index="flexform_ds.navbar.cctrlupbutton">'GO UP' button (from: fileadmin/mooslidebuttons/up/ -&gt; for: 'upwards' &amp; 'downwards'):</label>
+			<label index="flexform_ds.navbar.cctrldownbutton">'GO DOWN' button (from: fileadmin/mooslidebuttons/down/ -&gt; for: 'upwards' &amp; 'downwards'):</label>
+			<label index="flexform_ds.navbar.buttonsource">get button images from (following options will change after save!):</label>
+			<label index="flexform_ds.navbar.buttonsource.0">extension default buttons</label>
+			<label index="flexform_ds.navbar.buttonsource.1">fileadmin/mooslidebuttons/left(right,up,down)/</label>
+
+		</languageKey>
+		
+		<languageKey index="de" type="array">
+			<label index="pi1_title">Mooslide</label>
+			<label index="pi1_plus_wiz_description">Fügt ein Mooslide Element ein, welches entweder ausgewählte Content Elemente oder Seiten als Slideshow/Newsticker darstellt.</label>
+
+			<label index="flexform_ds.setup.title">Haupteinstellungen</label>
+			<label index="flexform_ds.setup.collectiontype">Inhalt des Sliders kommt aus (speichern nach Änderung!):</label>
+			<label index="flexform_ds.setup.collectiontype.0">Content Elementen</label>
+			<label index="flexform_ds.setup.collectiontype.1">ganze Seiten</label>
+			<label index="flexform_ds.setup.ccollection">Content Elemente auswählen:</label>
+			<label index="flexform_ds.setup.pcollection">Seiten auswählen:</label>
+			<label index="flexform_ds.setup.halignment">Horizontale Ausrichtung der Mooslide Box:</label>
+			<label index="flexform_ds.setup.halignment.0">zentriert</label>
+			<label index="flexform_ds.setup.halignment.1">linksbündig</label>
+			<label index="flexform_ds.setup.halignment.2">rechtsbündig</label>
+			<label index="flexform_ds.setup.halignmenttext">Horizontale Ausrichtung des Textes:</label>
+			<label index="flexform_ds.setup.halignmenttext.0">linksbündig</label>
+			<label index="flexform_ds.setup.halignmenttext.1">rechtsbündig</label>
+			<label index="flexform_ds.setup.halignmenttext.2">zentriert</label>
+			<label index="flexform_ds.setup.halignmenttext.3">Blocksatz</label>
+			<label index="flexform_ds.setup.bkgdcolor">Hintergrundfarbe:</label>
+			<label index="flexform_ds.setup.width">Breite:</label>
+			<label index="flexform_ds.setup.height">Höhe:</label>
+			<label index="flexform_ds.setup.slideinterval">Pause zwischen den Slides (ms):</label>
+			<label index="flexform_ds.setup.slidedirection">Laufrichtung:</label>
+			<label index="flexform_ds.setup.slidedirection.left">nach links</label>
+			<label index="flexform_ds.setup.slidedirection.right">nach rechts</label>
+			<label index="flexform_ds.setup.slidedirection.up">aufwärts</label>
+			<label index="flexform_ds.setup.slidedirection.down">abwärts</label>
+			<label index="flexform_ds.setup.slidepauseonmousein">Slides pausieren während 'mouseover'</label>
+			<label index="flexform_ds.setup.transitiontime">Dauer des Übergangs (ms) [muss mind. 50ms kürzer als die Pause zwischen den Slides sein!]:</label>
+			<label index="flexform_ds.setup.transitiontype">Übergangseffekt:</label>
+			<label index="flexform_ds.setup.transitiontype.quad">Quadratisch</label>
+			<label index="flexform_ds.setup.transitiontype.cubic">Kubisch</label>
+			<label index="flexform_ds.setup.transitiontype.quart">Quartisch</label>
+			<label index="flexform_ds.setup.transitiontype.quint">Quintisch</label>
+			<label index="flexform_ds.setup.transitiontype.expo">Exponentiell</label>
+			<label index="flexform_ds.setup.transitiontype.circ">Zirkulär</label>
+			<label index="flexform_ds.setup.transitiontype.sine">Sinusoidal</label>
+			<label index="flexform_ds.setup.transitiontype.back">Rückwärts</label>
+			<label index="flexform_ds.setup.transitiontype.bounce">Hüpfend</label>
+			<label index="flexform_ds.setup.transitiontype.elastic">Elastisch</label>
+			<label index="flexform_ds.setup.transitionease">Übergansdämpfung:</label>
+			<label index="flexform_ds.setup.transitionease.none">keine</label>
+			<label index="flexform_ds.setup.transitionease.in">Bei Beginn</label>
+			<label index="flexform_ds.setup.transitionease.out">Am Ende</label>
+			<label index="flexform_ds.setup.transitionease.inout">Bei Beginn &amp; Ende</label>
+
+			<label index="flexform_ds.border.title">Rahmen</label>
+			<label index="flexform_ds.border.styles.top">&lt;= alles wie OBEN</label>
+			<label index="flexform_ds.border.styles.left">&lt;= alles wie LINKS</label>
+			<label index="flexform_ds.border.styles.right">&lt;= alles wie RECHTS</label>
+			<label index="flexform_ds.border.styles.bottom">&lt;= alles wie UNTEN</label>
+			<label index="flexform_ds.border.styles.0">Keiner (none)</label>
+			<label index="flexform_ds.border.styles.1">Solide (solid)</label>
+			<label index="flexform_ds.border.styles.2">Gepunktet (dotted)</label>
+			<label index="flexform_ds.border.styles.3">Gestrichelt (dashed)</label>
+			<label index="flexform_ds.border.styles.4">Doppelt (double)</label>
+			<label index="flexform_ds.border.styles.5">Eingekerbt (groove)</label>
+			<label index="flexform_ds.border.styles.6">Erhaben (ridge)</label>
+			<label index="flexform_ds.border.styles.7">nach innen (inset)</label>
+			<label index="flexform_ds.border.styles.8">nach aussen (outset)</label>
+			<label index="flexform_ds.border.topstyle">OBEN - Stil (nach Änderung speichern!)</label>
+			<label index="flexform_ds.border.topsize">OBEN - Stärke (px)</label>
+			<label index="flexform_ds.border.topcolor">OBEN - Farbe</label>
+			<label index="flexform_ds.border.leftstyle">LINKS - Stil (nach Änderung speichern!)</label>
+			<label index="flexform_ds.border.leftsize">LINKS - Stärke (px)</label>
+			<label index="flexform_ds.border.leftcolor">LINKS - Farbe</label>
+			<label index="flexform_ds.border.rightstyle">RECHTS - Stil (nach Änderung speichern!)</label>
+			<label index="flexform_ds.border.rightsize">RECHTS - Stärke (px)</label>
+			<label index="flexform_ds.border.rightcolor">RECHTS - Farbe</label>
+			<label index="flexform_ds.border.bottomstyle">UNTEN - Stil (nach Änderung speichern!)</label>
+			<label index="flexform_ds.border.bottomsize">UNTEN - Stärke (px)</label>
+			<label index="flexform_ds.border.bottomcolor">UNTEN - Farbe</label>
+			
+			<label index="flexform_ds.clicklabel.title">Klickfläche</label>
+			<label index="flexform_ds.clicklabel.clicklabelcontent">Inhaltselement mit Bild(+Link)</label>
+			<label index="flexform_ds.clicklabel.clicklabelalignment">Ausrichtung des Bildelements:</label>
+			<label index="flexform_ds.clicklabel.clicklabelalignment.0">linksbündig</label>
+			<label index="flexform_ds.clicklabel.clicklabelalignment.1">rechtsbündig</label>
+			<label index="flexform_ds.clicklabel.sliderleftmargin">Innenabstand des Sliders vom linken Rand der Box (px)</label>
+			<label index="flexform_ds.clicklabel.sliderrightmargin">Innenabstand des Sliders vom rechten Rand der Box (px)</label>
+			<label index="flexform_ds.clicklabel.slidertopmargin">Innenabstand des Sliders vom oberen Rand der Box (px)</label>
+			<label index="flexform_ds.clicklabel.sliderbottommargin">Innenabstand des Sliders vom unteren Rand der Box (px)</label>
+
+			<label index="flexform_ds.navbar.title">Navigation</label>
+			<label index="flexform_ds.navbar.showctrlbar">'Vor &gt;&gt;' und '&lt;&lt; Zurück' Buttonleiste innerhalb des Sliders einblenden:</label>
+			<label index="flexform_ds.navbar.ctrlbarwidth">Breite der Buttonleiste:</label>
+			<label index="flexform_ds.navbar.ctrlbarposition">Positionierung der Buttonleiste:</label>
+			<label index="flexform_ds.navbar.ctrlbarposition.left">links</label>
+			<label index="flexform_ds.navbar.ctrlbarposition.right">rechts</label>
+			<label index="flexform_ds.navbar.ctrlbarposition.top">oben</label>
+			<label index="flexform_ds.navbar.ctrlbarposition.bottom">unten</label>
+			<label index="flexform_ds.navbar.ctrlbarbkgdcolor">Hintergundfarbe der Buttonleiste:</label>
+			<label index="flexform_ds.navbar.buttonsource">Button Bilder aus (die folgenden Optionen ändern sich nach dem speichern!):</label>
+			<label index="flexform_ds.navbar.buttonsource.0">default Buttons aus der Extension</label>
+			<label index="flexform_ds.navbar.buttonsource.1">fileadmin/mooslidebuttons/left(right,up,down)/</label>
+			<label index="flexform_ds.navbar.dctrlleftbutton">'NACH LINKS' button (aus: ..mooslide/res/defaultbuttons/left/ -&gt; für: 'nach links' &amp; 'nach rechts'):</label>
+			<label index="flexform_ds.navbar.dctrlrightbutton">'NACH RECHTS' button (aus: ..mooslide/res/defaultbuttons/right/ -&gt; für: 'nach links' &amp; 'nach rechts'):</label>
+			<label index="flexform_ds.navbar.dctrlupbutton">'NACH OBEN' button (aus: ..mooslide/res/defaultbuttons/up/ -&gt; für: 'aufwärts' &amp; 'abwärts'):</label>
+			<label index="flexform_ds.navbar.dctrldownbutton">'NACH UNTEN' button (aus: ..mooslide/res/defaultbuttons/down/ -&gt; für: 'aufwärts' &amp; 'abwärts'):</label>
+			<label index="flexform_ds.navbar.cctrlleftbutton">'NACH LINKS' button (aus: fileadmin/mooslidebuttons/left/ -&gt; für: 'nach links' &amp; 'nach rechts'):</label>
+			<label index="flexform_ds.navbar.cctrlrightbutton">'NACH RECHTS' button (aus: fileadmin/mooslidebuttons/right/ -&gt; für: 'nach links' &amp; 'nach rechts'):</label>
+			<label index="flexform_ds.navbar.cctrlupbutton">'NACH OBEN' button (aus: fileadmin/mooslidebuttons/up/ -&gt; für: 'aufwärts' &amp; 'abwärts'):</label>
+			<label index="flexform_ds.navbar.cctrldownbutton">'NACH UNTEN' button (aus: fileadmin/mooslidebuttons/down/ -&gt; für: 'aufwärts' &amp; 'abwärts'):</label>
+			
+		</languageKey>
+	</data>
+</T3locallang>

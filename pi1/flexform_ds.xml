@@ -1,0 +1,1099 @@
+<T3DataStructure>
+	<meta>
+		<langDisable>1</langDisable>
+	</meta>
+	<sheets>
+		<mainsetup>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.setup.title</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+
+					<collectiontype>
+						<TCEforms>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.setup.collectiontype</label>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.setup.collectiontype.0</numIndex>
+										<numIndex index="1">ccollection</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.setup.collectiontype.1</numIndex>
+										<numIndex index="1">pcollection</numIndex>
+									</numIndex>
+								</items>
+								<default>ccollection</default>
+							</config>
+						</TCEforms>
+					</collectiontype>
+
+					<ccollection>
+						<TCEforms>
+							<displayCond>FIELD:collectiontype:!IN:pcollection</displayCond>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.setup.ccollection</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>tt_content</allowed>
+								<size>5</size>
+								<minitems>0</minitems>
+								<maxitems>100</maxitems>
+								<show_thumbs>1</show_thumbs>
+								<autoSizeMax>50</autoSizeMax>
+							</config>							
+						</TCEforms>
+					</ccollection>				
+
+					<pcollection>
+						<TCEforms>
+							<displayCond>FIELD:collectiontype:IN:pcollection</displayCond>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.setup.pcollection</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>5</size>
+								<minitems>0</minitems>
+								<maxitems>100</maxitems>
+								<show_thumbs>1</show_thumbs>
+								<autoSizeMax>50</autoSizeMax>
+							</config>							
+						</TCEforms>
+					</pcollection>	
+
+					<halignment>
+						<TCEforms>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.setup.halignment</label>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.setup.halignment.0</numIndex>
+										<numIndex index="1">center</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.setup.halignment.1</numIndex>
+										<numIndex index="1">left</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.setup.halignment.2</numIndex>
+										<numIndex index="1">right</numIndex>
+									</numIndex>
+								</items>
+								<default>center</default>
+							</config>
+						</TCEforms>
+					</halignment>
+
+					<halignmenttext>
+						<TCEforms>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.setup.halignmenttext</label>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.setup.halignmenttext.0</numIndex>
+										<numIndex index="1">left</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.setup.halignmenttext.1</numIndex>
+										<numIndex index="1">right</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.setup.halignmenttext.2</numIndex>
+										<numIndex index="1">center</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.setup.halignmenttext.3</numIndex>
+										<numIndex index="1">justify</numIndex>
+									</numIndex>
+								</items>
+								<default>left</default>
+							</config>
+						</TCEforms>
+					</halignmenttext>
+
+					<bkgdcolor>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.setup.bkgdcolor</label>
+							<config>
+								<type>input</type>
+								<wizards>
+									<colorpick>
+										<type>colorbox</type>
+										<title>Color picker</title>
+										<script>wizard_colorpicker.php</script>
+										<dim>15x10</dim>
+										<tableStyle>border: solid 1px black; margin-left: 10px;</tableStyle>
+										<JSopenParams>height=550,width=365,status=0,menubar=0,scrollbars=1</JSopenParams>
+										<exampleImg>gfx/wizard_colorpickerex.jpg</exampleImg>
+									</colorpick>
+								</wizards>
+								<default>#FFFFFF</default>
+								<eval>is_in</eval>
+								<is_in>#0123456789_-ABCDEFabcdefghijklmnopqrstuvwxyz</is_in>
+								<size>10</size>
+								<max>20</max>
+							</config>
+						</TCEforms>
+					</bkgdcolor>
+
+					<width>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.setup.width</label>
+							<config>
+								<type>input</type>
+								<size>5</size>
+								<default>500</default>
+								<range type="array">
+									<lower>0</lower>
+									<upper>2000</upper>
+								</range>
+							</config>
+						</TCEforms>
+					</width>
+					
+					<height>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.setup.height</label>
+							<config>
+								<type>input</type>
+								<size>5</size>
+								<default>40</default>
+								<eval>int</eval>
+								<range type="array">
+									<lower>0</lower>
+									<upper>2000</upper>
+								</range>
+							</config>
+						</TCEforms>
+					</height>
+
+					<slideinterval>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.setup.slideinterval</label>
+							<config>
+								<type>input</type>
+								<size>5</size>
+								<default>5000</default>
+								<eval>int</eval>
+								<range type="array">
+									<lower>500</lower>
+									<upper>60000</upper>
+								</range>
+							</config>
+						</TCEforms>
+					</slideinterval>
+
+					<slidepauseonmousein>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.setup.slidepauseonmousein</label>
+							<config>
+								<type>check</type>
+								<default>1</default>
+							</config>
+						</TCEforms>
+					</slidepauseonmousein>
+
+					<slidedirection>
+						<TCEforms>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.setup.slidedirection</label>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.setup.slidedirection.left</numIndex>
+										<numIndex index="1">h_next</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.setup.slidedirection.right</numIndex>
+										<numIndex index="1">h_previous</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.setup.slidedirection.up</numIndex>
+										<numIndex index="1">v_next</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.setup.slidedirection.down</numIndex>
+										<numIndex index="1">v_previous</numIndex>
+									</numIndex>
+								</items>
+								<default>h_next</default>
+							</config>
+						</TCEforms>
+					</slidedirection>
+
+					<transitiontime>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.setup.transitiontime</label>
+							<config>
+								<type>input</type>
+								<size>5</size>
+								<default>750</default>
+								<eval>int</eval>
+								<range type="array">
+									<lower>200</lower>
+									<upper>20000</upper>
+								</range>
+							</config>
+						</TCEforms>
+					</transitiontime>
+
+					<transitiontype>
+						<TCEforms>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.setup.transitiontype</label>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.setup.transitiontype.quad</numIndex>
+										<numIndex index="1">Quad</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.setup.transitiontype.cubic</numIndex>
+										<numIndex index="1">Cubic</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.setup.transitiontype.quart</numIndex>
+										<numIndex index="1">Quart</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.setup.transitiontype.quint</numIndex>
+										<numIndex index="1">Quint</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.setup.transitiontype.expo</numIndex>
+										<numIndex index="1">Expo</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.setup.transitiontype.circ</numIndex>
+										<numIndex index="1">Circ</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.setup.transitiontype.sine</numIndex>
+										<numIndex index="1">Sine</numIndex>
+									</numIndex>
+									<numIndex index="7" type="array">
+										<numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.setup.transitiontype.back</numIndex>
+										<numIndex index="1">Back</numIndex>
+									</numIndex>
+									<numIndex index="8" type="array">
+										<numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.setup.transitiontype.bounce</numIndex>
+										<numIndex index="1">Bounce</numIndex>
+									</numIndex>
+									<numIndex index="9" type="array">
+										<numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.setup.transitiontype.elastic</numIndex>
+										<numIndex index="1">Elastic</numIndex>
+									</numIndex>
+								</items>
+								<default>Bounce</default>
+							</config>
+						</TCEforms>
+					</transitiontype>
+
+					<transitionease>
+						<TCEforms>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.setup.transitionease</label>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.setup.transitionease.none</numIndex>
+										<numIndex index="1"></numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.setup.transitionease.in</numIndex>
+										<numIndex index="1">.easeIn</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.setup.transitionease.out</numIndex>
+										<numIndex index="1">.easeOut</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.setup.transitionease.inout</numIndex>
+										<numIndex index="1">.easeInOut</numIndex>
+									</numIndex>
+								</items>
+								<default>.easeOut</default>
+							</config>
+						</TCEforms>
+					</transitionease>
+
+				</el>
+			</ROOT>
+		</mainsetup>
+		
+		<border>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.title</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+
+					<topstyle>
+						<TCEforms>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.topstyle</label>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="1">none</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.0</numIndex>	
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="1">solid</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.1</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="1">dotted</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.2</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="1">dashed</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.3</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="1">double</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.4</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="1">groove</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.5</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="1">ridge</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.6</numIndex>
+									</numIndex>
+									<numIndex index="7" type="array">
+										<numIndex index="1">inset</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.7</numIndex>
+									</numIndex>
+									<numIndex index="8" type="array">
+										<numIndex index="1">outset</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.8</numIndex>
+									</numIndex>
+									<numIndex index="9" type="array">
+										<numIndex index="1">left</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.left</numIndex>	
+									</numIndex>
+									<numIndex index="10" type="array">
+										<numIndex index="1">right</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.right</numIndex>	
+									</numIndex>
+									<numIndex index="11" type="array">
+										<numIndex index="1">bottom</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.bottom</numIndex>	
+									</numIndex>
+								</items>
+								<default>none</default>
+							</config>
+						</TCEforms>
+					</topstyle>
+					<topsize>
+						<TCEforms>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.topsize</label>
+							<displayCond>FIELD:topstyle:!IN:top,left,right,bottom,none</displayCond>
+							<config>
+								<type>input</type>
+								<size>3</size>
+								<default>0</default>
+								<eval>int</eval>
+								<range type="array">
+									<lower>0</lower>
+									<upper>200</upper>
+								</range>
+							</config>
+						</TCEforms>
+					</topsize>        
+					<topcolor>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.topcolor</label>
+							<displayCond>FIELD:topstyle:!IN:top,left,right,bottom,none</displayCond>
+							<config>
+								<type>input</type>
+								<wizards>
+									<colorpick>
+										<type>colorbox</type>
+										<title>Color picker</title>
+										<script>wizard_colorpicker.php</script>
+										<dim>15x10</dim>
+										<tableStyle>border: solid 1px black; margin-left: 10px;</tableStyle>
+										<JSopenParams>height=550,width=365,status=0,menubar=0,scrollbars=1</JSopenParams>
+										<exampleImg>gfx/wizard_colorpickerex.jpg</exampleImg>
+									</colorpick>
+								</wizards>
+								<default>#FFFFFF</default>
+								<eval>is_in</eval>
+								<is_in>#0123456789_-ABCDEFabcdefghijklmnopqrstuvwxyz</is_in>
+								<size>10</size>
+								<max>20</max>
+							</config>
+						</TCEforms>
+					</topcolor>
+
+					<leftstyle>
+						<TCEforms>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.leftstyle</label>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="1">none</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.0</numIndex>	
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="1">solid</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.1</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="1">dotted</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.2</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="1">dashed</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.3</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="1">double</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.4</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="1">groove</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.5</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="1">ridge</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.6</numIndex>
+									</numIndex>
+									<numIndex index="7" type="array">
+										<numIndex index="1">inset</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.7</numIndex>
+									</numIndex>
+									<numIndex index="8" type="array">
+										<numIndex index="1">outset</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.8</numIndex>
+									</numIndex>
+									<numIndex index="9" type="array">
+										<numIndex index="1">top</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.top</numIndex>	
+									</numIndex>
+									<numIndex index="10" type="array">
+										<numIndex index="1">right</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.right</numIndex>	
+									</numIndex>
+									<numIndex index="11" type="array">
+										<numIndex index="1">bottom</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.bottom</numIndex>	
+									</numIndex>
+								</items>
+								<default>none</default>
+							</config>
+						</TCEforms>
+					</leftstyle>
+					<leftsize>
+						<TCEforms>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.leftsize</label>
+							<displayCond>FIELD:leftstyle:!IN:top,left,right,bottom,none</displayCond>
+							<config>
+								<type>input</type>
+								<size>3</size>
+								<default>0</default>
+								<eval>int</eval>
+								<range type="array">
+									<lower>0</lower>
+									<upper>200</upper>
+								</range>
+							</config>
+						</TCEforms>
+					</leftsize>        
+					<leftcolor>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.leftcolor</label>
+							<displayCond>FIELD:leftstyle:!IN:top,left,right,bottom,none</displayCond>
+							<config>
+								<type>input</type>
+								<wizards>
+									<colorpick>
+										<type>colorbox</type>
+										<title>Color picker</title>
+										<script>wizard_colorpicker.php</script>
+										<dim>15x10</dim>
+										<tableStyle>border: solid 1px black; margin-left: 10px;</tableStyle>
+										<JSopenParams>height=550,width=365,status=0,menubar=0,scrollbars=1</JSopenParams>
+										<exampleImg>gfx/wizard_colorpickerex.jpg</exampleImg>
+									</colorpick>
+								</wizards>
+								<default>#FFFFFF</default>
+								<eval>is_in</eval>
+								<is_in>#0123456789_-ABCDEFabcdefghijklmnopqrstuvwxyz</is_in>
+								<size>10</size>
+								<max>20</max>
+							</config>
+						</TCEforms>
+					</leftcolor>
+
+					<rightstyle>
+						<TCEforms>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.rightstyle</label>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="1">none</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.0</numIndex>	
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="1">solid</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.1</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="1">dotted</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.2</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="1">dashed</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.3</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="1">double</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.4</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="1">groove</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.5</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="1">ridge</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.6</numIndex>
+									</numIndex>
+									<numIndex index="7" type="array">
+										<numIndex index="1">inset</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.7</numIndex>
+									</numIndex>
+									<numIndex index="8" type="array">
+										<numIndex index="1">outset</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.8</numIndex>
+									</numIndex>
+									<numIndex index="9" type="array">
+										<numIndex index="1">top</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.top</numIndex>	
+									</numIndex>
+									<numIndex index="10" type="array">
+										<numIndex index="1">left</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.left</numIndex>	
+									</numIndex>
+									<numIndex index="11" type="array">
+										<numIndex index="1">bottom</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.bottom</numIndex>	
+									</numIndex>
+								</items>
+								<default>none</default>
+							</config>
+						</TCEforms>
+					</rightstyle>
+					<rightsize>
+						<TCEforms>
+							<displayCond>FIELD:rightstyle:!IN:top,left,right,bottom,none</displayCond>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.rightsize</label>
+							<config>
+								<type>input</type>
+								<size>3</size>
+								<default>0</default>
+								<eval>int</eval>
+								<range type="array">
+									<lower>0</lower>
+									<upper>200</upper>
+								</range>
+							</config>
+						</TCEforms>
+					</rightsize>        
+					<rightcolor>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.rightcolor</label>
+							<displayCond>FIELD:rightstyle:!IN:top,left,right,bottom,none</displayCond>
+							<config>
+								<type>input</type>
+								<wizards>
+									<colorpick>
+										<type>colorbox</type>
+										<title>Color picker</title>
+										<script>wizard_colorpicker.php</script>
+										<dim>15x10</dim>
+										<tableStyle>border: solid 1px black; margin-left: 10px;</tableStyle>
+										<JSopenParams>height=550,width=365,status=0,menubar=0,scrollbars=1</JSopenParams>
+										<exampleImg>gfx/wizard_colorpickerex.jpg</exampleImg>
+									</colorpick>
+								</wizards>
+								<default>#FFFFFF</default>
+								<eval>is_in</eval>
+								<is_in>#0123456789_-ABCDEFabcdefghijklmnopqrstuvwxyz</is_in>
+								<size>10</size>
+								<max>20</max>
+							</config>
+						</TCEforms>
+					</rightcolor>
+
+					<bottomstyle>
+						<TCEforms>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.bottomstyle</label>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="1">none</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.0</numIndex>	
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="1">solid</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.1</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="1">dotted</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.2</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="1">dashed</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.3</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="1">double</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.4</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="1">groove</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.5</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="1">ridge</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.6</numIndex>
+									</numIndex>
+									<numIndex index="7" type="array">
+										<numIndex index="1">inset</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.7</numIndex>
+									</numIndex>
+									<numIndex index="8" type="array">
+										<numIndex index="1">outset</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.8</numIndex>
+									</numIndex>
+									<numIndex index="9" type="array">
+										<numIndex index="1">top</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.top</numIndex>	
+									</numIndex>
+									<numIndex index="10" type="array">
+										<numIndex index="1">left</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.left</numIndex>	
+									</numIndex>
+									<numIndex index="11" type="array">
+										<numIndex index="1">right</numIndex><numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.styles.right</numIndex>	
+									</numIndex>
+								</items>
+								<default>none</default>
+							</config>
+						</TCEforms>
+					</bottomstyle>
+					<bottomsize>
+						<TCEforms>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.bottomsize</label>
+							<displayCond>FIELD:bottomstyle:!IN:top,left,right,bottom,none</displayCond>
+							<config>
+								<type>input</type>
+								<size>3</size>
+								<default>0</default>
+								<eval>int</eval>
+								<range type="array">
+									<lower>0</lower>
+									<upper>200</upper>
+								</range>
+							</config>
+						</TCEforms>
+					</bottomsize>        
+					<bottomcolor>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.border.bottomcolor</label>
+							<displayCond>FIELD:bottomstyle:!IN:top,left,right,bottom,none</displayCond>
+							<config>
+								<type>input</type>
+								<wizards>
+									<colorpick>
+										<type>colorbox</type>
+										<title>Color picker</title>
+										<script>wizard_colorpicker.php</script>
+										<dim>15x10</dim>
+										<tableStyle>border: solid 1px black; margin-left: 10px;</tableStyle>
+										<JSopenParams>height=550,width=365,status=0,menubar=0,scrollbars=1</JSopenParams>
+										<exampleImg>gfx/wizard_colorpickerex.jpg</exampleImg>
+									</colorpick>
+								</wizards>
+								<default>#FFFFFF</default>
+								<eval>is_in</eval>
+								<is_in>#0123456789_-ABCDEFabcdefghijklmnopqrstuvwxyz</is_in>
+								<size>10</size>
+								<max>20</max>
+							</config>
+						</TCEforms>
+					</bottomcolor>
+					
+				</el>
+			</ROOT>
+		</border>
+
+		<clicklabel>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.clicklabel.title</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+
+					<clicklabelcontent>
+						<TCEforms>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.clicklabel.clicklabelcontent</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>tt_content</allowed>
+								<size>1</size>
+								<minitems>0</minitems>
+								<maxitems>1</maxitems>
+								<show_thumbs>1</show_thumbs>
+							</config>
+						</TCEforms>
+					</clicklabelcontent>
+					<clicklabelalignment>
+						<TCEforms>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.clicklabel.clicklabelalignment</label>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.clicklabel.clicklabelalignment.0</numIndex>
+										<numIndex index="1">left</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.clicklabel.clicklabelalignment.1</numIndex>
+										<numIndex index="1">right</numIndex>
+									</numIndex>
+								</items>
+								<default>left</default>
+							</config>
+						</TCEforms>
+					</clicklabelalignment>
+					<slidertopmargin>
+						<TCEforms>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.clicklabel.slidertopmargin</label>
+							<config>
+								<type>input</type>
+								<size>3</size>
+								<default>0</default>
+								<eval>int</eval>
+								<range type="array">
+									<lower>0</lower>
+									<upper>500</upper>
+								</range>
+							</config>
+						</TCEforms>
+					</slidertopmargin>
+					<sliderleftmargin>
+						<TCEforms>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.clicklabel.sliderleftmargin</label>
+							<config>
+								<type>input</type>
+								<size>3</size>
+								<default>0</default>
+								<eval>int</eval>
+								<range type="array">
+									<lower>0</lower>
+									<upper>500</upper>
+								</range>
+							</config>
+						</TCEforms>
+					</sliderleftmargin>
+					<sliderrightmargin>
+						<TCEforms>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.clicklabel.sliderrightmargin</label>
+							<config>
+								<type>input</type>
+								<size>3</size>
+								<default>0</default>
+								<eval>int</eval>
+								<range type="array">
+									<lower>0</lower>
+									<upper>500</upper>
+								</range>
+							</config>
+						</TCEforms>
+					</sliderrightmargin>
+					<sliderbottommargin>
+						<TCEforms>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.clicklabel.sliderbottommargin</label>
+							<config>
+								<type>input</type>
+								<size>3</size>
+								<default>0</default>
+								<eval>int</eval>
+								<range type="array">
+									<lower>0</lower>
+									<upper>500</upper>
+								</range>
+							</config>
+						</TCEforms>
+					</sliderbottommargin>
+					
+				</el>
+			</ROOT>
+		</clicklabel>
+		
+		<navbar>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.navbar.title</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+				
+					<showctrlbar>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.navbar.showctrlbar</label>
+							<config>
+								<type>check</type>
+								<default>0</default>
+							</config>
+						</TCEforms>
+					</showctrlbar>
+				
+					<ctrlbarwidth>
+						<TCEforms>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.navbar.ctrlbarwidth</label>
+							<config>
+								<type>input</type>
+								<size>3</size>
+								<default>20</default>
+								<eval>int</eval>
+								<range type="array">
+									<lower>0</lower>
+									<upper>500</upper>
+								</range>
+							</config>
+						</TCEforms>
+					</ctrlbarwidth>
+					
+					<ctrlbarposition>
+						<TCEforms>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.navbar.ctrlbarposition</label>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.navbar.ctrlbarposition.left</numIndex>
+										<numIndex index="1">left</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.navbar.ctrlbarposition.right</numIndex>
+										<numIndex index="1">right</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.navbar.ctrlbarposition.top</numIndex>
+										<numIndex index="1">top</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.navbar.ctrlbarposition.bottom</numIndex>
+										<numIndex index="1">bottom</numIndex>
+									</numIndex>
+								</items>
+								<default>left</default>
+							</config>
+						</TCEforms>
+					</ctrlbarposition>
+					
+					<ctrlbarbkgdcolor>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.navbar.ctrlbarbkgdcolor</label>
+							<config>
+								<type>input</type>
+								<wizards>
+									<colorpick>
+										<type>colorbox</type>
+										<title>Color picker</title>
+										<script>wizard_colorpicker.php</script>
+										<dim>15x10</dim>
+										<tableStyle>border: solid 1px black; margin-left: 10px;</tableStyle>
+										<JSopenParams>height=550,width=365,status=0,menubar=0,scrollbars=1</JSopenParams>
+										<exampleImg>gfx/wizard_colorpickerex.jpg</exampleImg>
+									</colorpick>
+								</wizards>
+								<default>#FFFFFF</default>
+								<eval>is_in</eval>
+								<is_in>#0123456789_-ABCDEFabcdefghijklmnopqrstuvwxyz</is_in>
+								<size>10</size>
+								<max>20</max>
+							</config>
+						</TCEforms>
+					</ctrlbarbkgdcolor>
+
+					<buttonsource>
+						<TCEforms>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.navbar.buttonsource</label>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.navbar.buttonsource.0</numIndex>
+										<numIndex index="1">default</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.navbar.buttonsource.1</numIndex>
+										<numIndex index="1">fileadmin</numIndex>
+									</numIndex>
+								</items>
+								<default>default</default>
+							</config>
+						</TCEforms>
+					</buttonsource>
+
+					<dctrlleftbutton>
+						<TCEforms>
+							<exclude>1</exclude>
+							<displayCond>FIELD:buttonsource:=:default</displayCond>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.navbar.dctrlleftbutton</label>
+							<config>
+								<type>select</type>
+								<fileFolder>EXT:mooslide/res/defaultbuttons/left/</fileFolder>
+								<fileFolder_extList>gif,jpg,png</fileFolder_extList>
+								<fileFolder_recursion>0</fileFolder_recursion>
+								<size>1</size>
+								<minitems>0</minitems>
+								<maxitems>1</maxitems>
+							   	<suppress_icons>0</suppress_icons>
+								<iconsInOptionTags>1</iconsInOptionTags>
+							</config>
+						</TCEforms>
+					</dctrlleftbutton>
+					<dctrlrightbutton>
+						<TCEforms>
+							<exclude>1</exclude>
+							<displayCond>FIELD:buttonsource:=:default</displayCond>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.navbar.dctrlrightbutton</label>
+							<config>
+								<type>select</type>
+								<fileFolder>EXT:mooslide/res/defaultbuttons/right/</fileFolder>
+								<fileFolder_extList>gif,jpg,png</fileFolder_extList>
+								<fileFolder_recursion>0</fileFolder_recursion>
+								<size>1</size>
+								<minitems>0</minitems>
+								<maxitems>1</maxitems>
+							   	<suppress_icons>0</suppress_icons>
+								<iconsInOptionTags>1</iconsInOptionTags>
+							</config>
+						</TCEforms>
+					</dctrlrightbutton>
+					<dctrlupbutton>
+						<TCEforms>
+							<exclude>1</exclude>
+							<displayCond>FIELD:buttonsource:=:default</displayCond>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.navbar.dctrlupbutton</label>
+							<config>
+								<type>select</type>
+								<fileFolder>EXT:mooslide/res/defaultbuttons/up/</fileFolder>
+								<fileFolder_extList>gif,jpg,png</fileFolder_extList>
+								<fileFolder_recursion>0</fileFolder_recursion>
+								<size>1</size>
+								<minitems>0</minitems>
+								<maxitems>1</maxitems>
+							   	<suppress_icons>0</suppress_icons>
+								<iconsInOptionTags>1</iconsInOptionTags>
+							</config>
+						</TCEforms>
+					</dctrlupbutton>
+					<dctrldownbutton>
+						<TCEforms>
+							<exclude>1</exclude>
+							<displayCond>FIELD:buttonsource:=:default</displayCond>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.navbar.dctrldownbutton</label>
+							<config>
+								<type>select</type>
+								<fileFolder>EXT:mooslide/res/defaultbuttons/down/</fileFolder>
+								<fileFolder_extList>gif,jpg,png</fileFolder_extList>
+								<fileFolder_recursion>0</fileFolder_recursion>
+								<size>1</size>
+								<minitems>0</minitems>
+								<maxitems>1</maxitems>
+							   	<suppress_icons>0</suppress_icons>
+								<iconsInOptionTags>1</iconsInOptionTags>
+							</config>
+						</TCEforms>
+					</dctrldownbutton>
+
+					<cctrlleftbutton>
+						<TCEforms>
+							<exclude>1</exclude>
+							<displayCond>FIELD:buttonsource:=:fileadmin</displayCond>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.navbar.cctrlleftbutton</label>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1"></numIndex>
+									</numIndex>
+								</items>
+								<fileFolder>fileadmin/mooslidebuttons/left/</fileFolder>
+								<fileFolder_extList>gif,jpg,png</fileFolder_extList>
+								<fileFolder_recursion>0</fileFolder_recursion>
+								<size>1</size>
+								<minitems>0</minitems>
+								<maxitems>1</maxitems>
+							   	<suppress_icons>0</suppress_icons>
+								<iconsInOptionTags>1</iconsInOptionTags>
+							</config>
+						</TCEforms>
+					</cctrlleftbutton>
+					<cctrlrightbutton>
+						<TCEforms>
+							<exclude>1</exclude>
+							<displayCond>FIELD:buttonsource:=:fileadmin</displayCond>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.navbar.cctrlrightbutton</label>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1"></numIndex>
+									</numIndex>
+								</items>
+								<fileFolder>fileadmin/mooslidebuttons/right/</fileFolder>
+								<fileFolder_extList>gif,jpg,png</fileFolder_extList>
+								<fileFolder_recursion>0</fileFolder_recursion>
+								<size>1</size>
+								<minitems>0</minitems>
+								<maxitems>1</maxitems>
+							   	<suppress_icons>0</suppress_icons>
+								<iconsInOptionTags>1</iconsInOptionTags>
+							</config>
+						</TCEforms>
+					</cctrlrightbutton>
+					<cctrlupbutton>
+						<TCEforms>
+							<exclude>1</exclude>
+							<displayCond>FIELD:buttonsource:=:fileadmin</displayCond>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.navbar.cctrlupbutton</label>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1"></numIndex>
+									</numIndex>
+								</items>
+								<fileFolder>fileadmin/mooslidebuttons/up/</fileFolder>
+								<fileFolder_extList>gif,jpg,png</fileFolder_extList>
+								<fileFolder_recursion>0</fileFolder_recursion>
+								<size>1</size>
+								<minitems>0</minitems>
+								<maxitems>1</maxitems>
+							   	<suppress_icons>0</suppress_icons>
+								<iconsInOptionTags>1</iconsInOptionTags>
+							</config>
+						</TCEforms>
+					</cctrlupbutton>
+					<cctrldownbutton>
+						<TCEforms>
+							<exclude>1</exclude>
+							<displayCond>FIELD:buttonsource:=:fileadmin</displayCond>
+							<label>LLL:EXT:mooslide/pi1/locallang_ds.xml:flexform_ds.navbar.cctrldownbutton</label>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1"></numIndex>
+									</numIndex>
+								</items>
+								<fileFolder>fileadmin/mooslidebuttons/down/</fileFolder>
+								<fileFolder_extList>gif,jpg,png</fileFolder_extList>
+								<fileFolder_recursion>0</fileFolder_recursion>
+								<size>1</size>
+								<minitems>0</minitems>
+								<maxitems>1</maxitems>
+							   	<suppress_icons>0</suppress_icons>
+								<iconsInOptionTags>1</iconsInOptionTags>
+							</config>
+						</TCEforms>
+					</cctrldownbutton>
+
+				</el>
+			</ROOT>
+		</navbar>
+
+		
+	</sheets>
+</T3DataStructure>
