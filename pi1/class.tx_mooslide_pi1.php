@@ -118,7 +118,7 @@ class tx_mooslide_pi1 extends tslib_pibase {
 		$leftborderstyle = $this->getConfMixValue('border', 'leftstyle', $prefer_ts_over_ff);
 		if($leftborderstyle == 'none') {
 			$this->config['leftbordersize'] = 0;
-		} else if( in_array( $leftborderstyle, array('top','left','right','bottom') ) && $this->getConfMixValue('border', $leftborderstyle.'size', $prefer_ts_over_ff)=='none' ) {
+		} else if( in_array( $leftborderstyle, array('top','left','right','bottom') ) && $this->getConfMixValue('border', $leftborderstyle.'size', $prefer_ts_over_ff)!=='none' ) {
 			$this->config['leftbordersize'] = $this->getConfMixValue('border', $leftborderstyle.'size', $prefer_ts_over_ff);
 		} else {
 			$this->config['leftbordersize'] = intval($this->getConfMixValue('border', 'leftsize', $prefer_ts_over_ff));
@@ -127,7 +127,7 @@ class tx_mooslide_pi1 extends tslib_pibase {
 		$topborderstyle = $this->getConfMixValue('border', 'topstyle', $prefer_ts_over_ff);
 		if($topborderstyle == 'none') {
 			$this->config['topbordersize'] = 0;
-		} else if( in_array( $topborderstyle, array('top','left','right','bottom') ) && $this->getConfMixValue('border', $topborderstyle.'size', $prefer_ts_over_ff)=='none' ) {
+		} else if( in_array( $topborderstyle, array('top','left','right','bottom') ) && $this->getConfMixValue('border', $topborderstyle.'size', $prefer_ts_over_ff)!=='none' ) {
 			$this->config['topbordersize'] = $this->getConfMixValue('border', $topborderstyle.'size', $prefer_ts_over_ff);
 		} else {
 			$this->config['topbordersize'] = intval($this->getConfMixValue('border', 'topsize', $prefer_ts_over_ff));
