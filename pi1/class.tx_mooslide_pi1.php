@@ -114,34 +114,6 @@ class tx_mooslide_pi1 extends tslib_pibase {
 		### calculate and assemble the border css
 		$border = array();
 		$this->config['border']='';
-		# needed for calculating buttonpannel position
-		$leftborderstyle = $this->getConfMixValue('border', 'leftstyle', $prefer_ts_over_ff);
-		if($leftborderstyle == 'none') {
-			$this->config['leftbordersize'] = 0;
-		} else if( in_array( $leftborderstyle, array('top','left','right','bottom') ) && $this->getConfMixValue('border', $leftborderstyle.'size', $prefer_ts_over_ff)!=='none' ) {
-			$this->config['leftbordersize'] = $this->getConfMixValue('border', $leftborderstyle.'size', $prefer_ts_over_ff);
-		} else {
-			$this->config['leftbordersize'] = intval($this->getConfMixValue('border', 'leftsize', $prefer_ts_over_ff));
-		}
-		
-		$topborderstyle = $this->getConfMixValue('border', 'topstyle', $prefer_ts_over_ff);
-		if($topborderstyle == 'none') {
-			$this->config['topbordersize'] = 0;
-		} else if( in_array( $topborderstyle, array('top','left','right','bottom') ) && $this->getConfMixValue('border', $topborderstyle.'size', $prefer_ts_over_ff)!=='none' ) {
-			$this->config['topbordersize'] = $this->getConfMixValue('border', $topborderstyle.'size', $prefer_ts_over_ff);
-		} else {
-			$this->config['topbordersize'] = intval($this->getConfMixValue('border', 'topsize', $prefer_ts_over_ff));
-		}
-		
-/*
-		$this->config['topbordersize'] = $this->getConfMixValue('border', 'topsize', $prefer_ts_over_ff);
-		if (!$this->config['topbordersize']) {
-			$topborderstyle = $this->getConfMixValue('border', 'topstyle', $prefer_ts_over_ff);
-			if( in_array( $topborderstyle, array('top','left','right','bottom') ) ){
-				$this->config['topbordersize'] = $this->getConfMixValue('border', $topborderstyle.'size', $prefer_ts_over_ff);
-			}
-		}
-*/		
 		foreach( array('top','left','right','bottom') as $key => $borderpos) {
 			$border[$borderpos] = '';
 			$style = $this->getConfMixValue('border', $borderpos.'style', $prefer_ts_over_ff);	
@@ -161,11 +133,10 @@ class tx_mooslide_pi1 extends tslib_pibase {
 				$this->config['border'] .= '			border-'.$borderpos.':'.$border[$borderpos].';'.chr(10); 
 			}
 		}
-
 		$this->config['border']=trim($this->config['border']);
 
 
-		### get the records for the recgarding CEs
+		### get the records for the regarding CEs
 		$content = "";
 		foreach ($this->slides as $sheet => $ce_ids) {
 			$records_conf = array(
@@ -214,8 +185,8 @@ class tx_mooslide_pi1 extends tslib_pibase {
 					<div id="mooslideprev'.$this->uid.'"></div>
 				</div>' : '';
 		$returndiv = '
-			<div class="mooslideposition'.$this->config['halignment'].'">'.$ctrlbuttons.'
-				<div id="mooslidecontainer'.$this->uid.'">
+			<div class="mooslideposition'.$this->config['halignment'].'">
+				<div id="mooslidecontainer'.$this->uid.'">'.$ctrlbuttons.'
 					<div id="mooslidebkgd'.$this->uid.'">'.$bkgdimg.'</div>
 					<div id="mooslidemask'.$this->uid.'">	
 						<div id="'.$this->prefixId.$this->uid.'">
@@ -289,8 +260,6 @@ class tx_mooslide_pi1 extends tslib_pibase {
 		$mb = $this->config['sliderbottommargin'];
 		$w = $this->config['width'];
 		$h = $this->config['height'];
-		$btop = $this->config['topbordersize'];
-		$blft = $this->config['leftbordersize'];
 		$bpos = $this->config['ctrlbarposition'];
 		$bwidth = $this->config['ctrlbarwidth'];
 		list( $slidemode, $slidedir ) = explode('_',$this->config['slidedirection']);
@@ -302,8 +271,9 @@ class tx_mooslide_pi1 extends tslib_pibase {
 			$bbgcolor = !empty($this->config['ctrlbarbkgdcolor'])?$this->config['ctrlbarbkgdcolor']:'none';
 			switch( $bpos ) {
 				case 'left': 
-					$bcss = 'top:'.($btop+$mt).'px; left:'.($blft+$ml).'px; height:'.($h-$mt-$mb).'px; width:'.$bwidth.'px;';
+					$bcss = 'top:'.($mt).'px; left:'.($ml).'px; height:'.($h-$mt-$mb).'px; width:'.$bwidth.'px;';
 					$ml += $bwidth;
+					$panelheight = $h-$mt-$mb;
 					$pheight = floor(($h-$mt-$mb)/2);
 					$nheight = ceil(($h-$mt-$mb)/2);
 					$pwidth = $bwidth;
@@ -312,8 +282,9 @@ class tx_mooslide_pi1 extends tslib_pibase {
 					$nextpos = 'top center';
 					break;
 				case 'right': 
-					$bcss = 'top:'.($btop+$mt).'px; left:'.($blft+$w-$bwidth-$mr).'px; height:'.($h-$mt-$mb).'px; width:'.$bwidth.'px;';
+					$bcss = 'top:'.($mt).'px; left:'.($w-$bwidth-$mr).'px; height:'.($h-$mt-$mb).'px; width:'.$bwidth.'px;';
 					$mr += $bwidth;
+					$panelheight = $h-$mt-$mb;
 					$pheight = floor(($h-$mt-$mb)/2);
 					$nheight = ceil(($h-$mt-$mb)/2);
 					$pwidth = $bwidth;
@@ -322,8 +293,9 @@ class tx_mooslide_pi1 extends tslib_pibase {
 					$nextpos = 'top center';
 					break;
 				case 'top': 
-					$bcss = 'top:'.($btop+$mt).'px; left:'.($blft+$ml).'px; height:'.$bwidth.'px; width:'.($w-$ml-$mr).'px;';
+					$bcss = 'top:'.($mt).'px; left:'.($ml).'px; height:'.$bwidth.'px; width:'.($w-$ml-$mr).'px;';
 					$mt += $bwidth;
+					$panelheight = $bwidth;
 					$pwidth = floor(($w-$ml-$mr)/2);
 					$nwidth = ceil(($w-$ml-$mr)/2);
 					$pheight = $bwidth;
@@ -332,8 +304,9 @@ class tx_mooslide_pi1 extends tslib_pibase {
 					$nextpos = 'center left';
 					break;				
 				case 'bottom': 
-					$bcss = 'top:'.($btop+$h-$bwidth-$mb).'px; left:'.($blft+$ml).'px; height:'.$bwidth.'px; width:'.($w-$ml-$mr).'px;';
+					$bcss = 'top:'.($h-$bwidth-$mb).'px; left:'.($ml).'px; height:'.$bwidth.'px; width:'.($w-$ml-$mr).'px;';
 					$mb += $bwidth;
+					$panelheight = $bwidth;
 					$pwidth = floor(($w-$ml-$mr)/2);
 					$nwidth = ceil(($w-$ml-$mr)/2);
 					$pheight = $bwidth;
@@ -354,7 +327,7 @@ class tx_mooslide_pi1 extends tslib_pibase {
 			$nextimg = strlen($this->config['ctrl'.$nextsubdir.'button']) ? $buttondir.$nextsubdir.'/'.$this->config['ctrl'.$nextsubdir.'button'] : '/'.t3lib_extMgm::siteRelPath($this->extKey).'res/defaultbuttons/default_'.$nextsubdir.'.gif';;
 			
 			$bstyles = '
-			#mooslidebuttons'.$this->uid.'{ position:absolute; padding:0; margin:0; z-index:100; background-color:'.$bbgcolor.';'.$bcss.'}
+			#mooslidebuttons'.$this->uid.'{ position:relative; padding:0; margin:0; z-index:100; background-color:'.$bbgcolor.';'.$bcss.'}
 			#mooslideprev'.$this->uid.'{color:#0080FF;padding:0; cursor:pointer; height:'.$pheight.'px; width:'.$pwidth.'px; float:right; background-repeat: no-repeat; background-image:url(\''.$previmg.'\'); background-position:'.$prevpos.';}
 			#mooslidenext'.$this->uid.'{color:#0080FF;padding:0; cursor:pointer; height:'.$nheight.'px; width:'.$nwidth.'px; float:left; background-repeat: no-repeat; background-image:url(\''.$nextimg.'\'); background-position:'.$nextpos.';}';
 		}
@@ -391,12 +364,12 @@ class tx_mooslide_pi1 extends tslib_pibase {
 		
 		### this needs to go to the styles for each ticker individually
 		$GLOBALS['TSFE']->setCSS($this->extKey,$GLOBALS['TSFE']->additionalCSS[$this->extKey].'
-		.mooslidepositioncenter .mooslidecontainer'.$this->uid.'{ margin:0 auto; }'.$bstyles.'
+		.mooslidepositioncenter #mooslidecontainer'.$this->uid.'{ margin:0 auto; }'.$bstyles.'
 		#mooslidemask'.$this->uid.'{
 			margin:0px;
 			position:relative;
 			left:'.$ml.'px;
-			top:'.$mt.'px;
+			top:'.($mt-$panelheight-$h).'px;
 			width:'.($w-$ml-$mr).'px;
 			height:'.($h-$mt-$mb).'px;
 			overflow:hidden;
@@ -408,11 +381,13 @@ class tx_mooslide_pi1 extends tslib_pibase {
 			height:'.$h.'px;
 			'.$this->config['border'].'				
 			margin:0px;
+			overflow:hidden;
 		}
 		#mooslidebkgd'.$this->uid.'{
-			position:absolute;
+			position:relative;
 			width:'.$w.'px;
 			height:'.$h.'px;
+			top:'.(-$panelheight).'px;
 			overflow:hidden;	
 			margin:0px;
 		}
@@ -458,7 +433,7 @@ class tx_mooslide_pi1 extends tslib_pibase {
 					next: $('mooslidenext".$this->uid."')" : "";
 	
 		$GLOBALS['TSFE']->setJS($this->extKey.$this->uid,"
-		window.addEvent('domready',function(){
+		window.addEvent('load',function(){
 			var mooslide".$this->uid." = new mooSlide({
 				mode: '".$slidemode."',
 				container: $('".$this->prefixId.$this->uid."'),
