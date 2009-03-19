@@ -186,8 +186,8 @@
 								<default>5000</default>
 								<eval>int</eval>
 								<range type="array">
-									<lower>500</lower>
-									<upper>60000</upper>
+									<lower>100</lower>
+									<upper>600000</upper>
 								</range>
 							</config>
 						</TCEforms>
@@ -239,11 +239,11 @@
 							<config>
 								<type>input</type>
 								<size>5</size>
-								<default>750</default>
+								<default>550</default>
 								<eval>int</eval>
 								<range type="array">
-									<lower>200</lower>
-									<upper>20000</upper>
+									<lower>100</lower>
+									<upper>600000</upper>
 								</range>
 							</config>
 						</TCEforms>
@@ -720,7 +720,7 @@
 								<type>group</type>
 								<internal_type>db</internal_type>
 								<allowed>tt_content</allowed>
-								<size>1</size>
+								<size>5</size>
 								<minitems>0</minitems>
 								<maxitems>1</maxitems>
 								<show_thumbs>1</show_thumbs>
