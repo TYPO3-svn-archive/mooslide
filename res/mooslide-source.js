@@ -133,12 +133,6 @@ var mooSlide = new Class({
 				this.FxStyle
 			);
 		}
-		if (this.pauseonmouse) {
-			this.container.getParent('div').addEvents({
-				'mouseenter': this.pause.bind(this),
-				'mouseleave': this.resume.bind(this)
-			});
-		}
 		
 		this.button_event = properties.button_event || 'click';
 		this.handle_event = properties.handle_event || 'click';
@@ -154,7 +148,16 @@ var mooSlide = new Class({
 		};
 
 	},
-
+	mousepause: function() {
+		if (this.pauseonmouse) {
+			this.container.getParent('div').addEvents({
+				'mouseenter': this.pause.bind(this),
+				'mouseleave': this.resume.bind(this)
+			});
+			this.pauseonmouse = false;
+		}
+		
+	},
 	previous: function( stopautorun ){
 		this.stop();
 		this.currpos += (this.currpos > 0) ? -1 : this.items.length-1;
@@ -175,7 +178,7 @@ var mooSlide = new Class({
 
 	pause: function( ){
 		this.fx.pause();
-		$clear( this.runner );
+		this.stop();
 	},
 	resume: function( ){
 		this.fx.resume();
@@ -213,7 +216,10 @@ var mooSlide = new Class({
 			this.stop();
 		};
 		
-		// transition starten (zur position fahren)
+		// trigger adding of mousepause event handlers 
+		this.mousepause();
+		
+		// start transition (move to position)
 		this.fx.start( -this.currpos * this.size );
 
 		// initialize the onWalk event. supplies the current item and the current handle
