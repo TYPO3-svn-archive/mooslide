@@ -263,12 +263,12 @@ class tx_mooslide_pi1 extends tslib_pibase {
 		$bpos = $this->config['ctrlbarposition'];
 		$bwidth = $this->config['ctrlbarwidth'];
 		list( $slidemode, $slidedir ) = explode('_',$this->config['slidedirection']);
-		$bgclr = !empty($this->config['bkgdcolor'])?$this->config['bkgdcolor']:'none';
+		$bgclr = !empty($this->config['bkgdcolor'])?$this->config['bkgdcolor']:'transparent';
 		$buttondir=$this->config['buttondir'];
 		
 		$bstyles = '';
 		if($this->config['showctrlbar']) {
-			$bbgcolor = !empty($this->config['ctrlbarbkgdcolor'])?$this->config['ctrlbarbkgdcolor']:'none';
+			$bbgcolor = !empty($this->config['ctrlbarbkgdcolor'])?$this->config['ctrlbarbkgdcolor']:'transparent';
 			switch( $bpos ) {
 				case 'left': 
 					$bcss = 'top:'.($mt).'px; left:'.($ml).'px; height:'.($h-$mt-$mb).'px; width:'.$bwidth.'px;';
