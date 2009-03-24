@@ -2,7 +2,7 @@
 /***************************************************************
 *  Copyright notice
 *
-*  (c) 2008 senomedia <>
+*  (c) 2009 senomedia <info@sensomedia.de>
 *  All rights reserved
 *
 *  This script is part of the TYPO3 project. The TYPO3 project is
@@ -28,9 +28,9 @@
 /**
  * Class that adds the wizard icon.
  *
- * @author	senomedia <>
+ * @author	Michael 'Iggy' Rudolph <info@sensomedia.de>
  * @package	TYPO3
- * @subpackage	tx_snsomdmooslide
+ * @subpackage	tx_mooslide
  */
 class tx_mooslide_pi1_wizicon {
 
