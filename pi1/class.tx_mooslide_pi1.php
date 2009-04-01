@@ -374,7 +374,8 @@ class tx_mooslide_pi1 extends tslib_pibase {
 			height:'.($h-$mt-$mb).'px;
 			overflow:hidden;
 			text-align:'.$this->config['halignmenttext'].';
-			background-color:'.$bgclr.'
+			background-color:'.$bgclr.';
+			cursor:default;
 		}
 		#mooslidecontainer'.$this->uid.'{
 			width:'.$w.'px;
