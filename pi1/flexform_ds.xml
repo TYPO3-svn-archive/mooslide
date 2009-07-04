@@ -28,6 +28,7 @@
 								</items>
 								<default>ccollection</default>
 							</config>
+							<onChange>reload</onChange> 
 						</TCEforms>
 					</collectiontype>
 
